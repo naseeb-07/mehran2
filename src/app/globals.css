@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-display: 'Cinzel', serif;
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --primary-emerald: #033833;
+  --primary-gold: #D4AF37;
+  --primary-sand: #FAF7F2;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    color-scheme: light;
+  }
+  
+  body {
+    @apply bg-mehran-cream text-mehran-charcoal font-sans antialiased selection:bg-mehran-gold selection:text-mehran-dark;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif tracking-tight text-mehran-dark;
+  }
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #F0D38D 0%, #D4AF37 50%, #B8860B 100%);
+}
+
+.bg-radial-card {
+  background: radial-gradient(circle at top left, #0e3d30, #06221a);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #041c16;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F0D38D;
+}
+
+/* Arabian Damask / Geometric subtle background pattern */
+.bg-arabian-pattern {
+  background-color: #033833;
+  background-image: radial-gradient(#d4af37 0.75px, transparent 0.75px), radial-gradient(#d4af37 0.75px, #033833 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.bg-cream-pattern {
+  background-color: #FAF7F2;
+  background-image: radial-gradient(#e2d6c1 0.8px, transparent 0.8px);
+  background-size: 24px 24px;
+}
+
+.bg-dark-mandi-pattern {
+  background-color: #26160F;
+  background-image: radial-gradient(#803816 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Elegant gold gradient border */
+.border-gold-gradient {
+  border-image: linear-gradient(to right, #D4AF37, #F0D38D, #9F7E1B) 1;
+}
+
+/* Glow effects */
+.gold-glow {
+  box-shadow: 0 0 35px -5px rgba(212, 175, 55, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
